@@ -3,7 +3,7 @@
 
 import OpenAI from "openai";
 
-const apiKey = "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";
+const apiKey = "";
 
 const openai = new OpenAI({
     //apiKey: apiKey
