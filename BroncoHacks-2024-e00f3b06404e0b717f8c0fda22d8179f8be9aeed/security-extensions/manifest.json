@@ -20,10 +20,5 @@
     ],
     "action": {
       "default_popup": "hello.html"
-    },
-    "permissions": ["storage"],
-    "background": {
-      "service_worker": "background.js"
     }
-
   }
