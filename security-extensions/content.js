@@ -24,16 +24,25 @@ window.addEventListener('hashchange', function(){
         var body = emailBodyHTML[0].innerText;
         console.log(body);
 
-        
         let scanButton = document.createElement("button");
         scanButton.className = "scanButton";
         emailSubjectHTML[0].after(scanButton);
-        scanButton.outerHTML = "<button onclick='scanButtonClicked()'>Scan</button>";
+        scanButton.innerHTML = "  Scan  ";
+
+        scanButton.addEventListener("click", scanButtonClicked);
+        var scanButtonClickedBefore
+        function scanButtonClicked(){
+            if(!scanButtonClickedBefore) {
+                scanButtonClickedBefore = true;
+                console.log('THE BUTTON WAS CLICKED ITS GO TIME');
+                scanButton.innerHTML = "Thinking";
+            }
+            
+            // Ask ChatGPT here and set percentage to 
+
+
+        }
 
         
     }
 });
-
-function scanButtonClicked() {
-    return null;
-}
